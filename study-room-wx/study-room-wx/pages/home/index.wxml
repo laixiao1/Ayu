@@ -1,0 +1,58 @@
+<view class="outermost-layer-tab">
+  <!-- 轮播图 -->
+  <view class="page-section swiper">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-color="#ffffff"  indicator-active-color="#1C8FFA" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="page-section-spacing">
+      <block wx:for="{{backgroundSwiper}}" wx:key="*this">
+        <swiper-item>
+            <van-image width="100%" height="100%" src="{{ item }}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="reserve centered">
+    <view>自主预定</view>
+    <van-button type="primary" color="#1C8FFA" block bindtap="regionCheck">预定</van-button>
+  </view>
+
+ 
+
+  <view class="journalism centered">
+    <view class="pt-page-title">
+      <view>
+        场地介绍
+      </view>
+    </view>
+    <view class="introduce">
+        <view class="introduce_title" wx:for="{{journalismList}}" wx:key="*this">
+          <span class="sign"></span>
+          <span>{{ item.text }}</span>
+        </view>
+    </view>
+    <view class="pt-page-title">
+      <view>
+        注意事项
+      </view>
+    </view>
+    <view class="introduce">
+        <view class="introduce_title" wx:for="{{matter}}" wx:key="*this">
+          <span style="padding-bottom: 7rpx;">{{ item.text }}</span>
+        </view>
+    </view>
+    <view class="pt-page-title">
+      <view>
+        地址
+      </view>
+    </view>
+    <view class="introduce city">
+        <view class="introduce_title">
+          <span>xx省xx市xx市金融中心北 大华中央城</span>
+        </view>
+    </view>
+  </view>
+
+  <view class="centered" style="margin-top: 20rpx;">
+    
+  </view>
+    
+</view>
